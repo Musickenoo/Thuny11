@@ -1,17 +1,19 @@
-#include <iostream>
-#include <cstdlib>
-#include <ctime>
+#include<iostream>
+#include<cstdlib>
+#include<ctime>
+#include<string>
 using namespace std;
-int main()
-{   cout << "Press Enter 3 times to reveal your future.";
-    string grade[]={"","A","B+","B","C+","C","D+","D","F","W"};
-    cin.get();
-    cin.get();
-    cin.get();
+
+int main(){
+    int x=0;
     srand(time(0));
-    int x = rand()%9+1;
-    cout << "You will get "<< grade[x] <<" in this Econ history.";
-    
-    return 0 ;
+    string grade[9]={"A", "B+", "B", "C+","C", "D+", "D", "F","W"};
+    cout << "Press Enter 3 times to reveal your future.";
+    while(x < 3 ){
+        cin.get() ;
+        x++;
+    }
+    cout << "You will get "<<grade[rand()%9]<<" in this 261102.";
+    return 0;
 }
 
